@@ -1,0 +1,4 @@
+"scripts": {
+  "build": "tsc"
+  "start": "http-server./dist -c-1"
+}
