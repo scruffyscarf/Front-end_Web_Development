@@ -1,4 +1,18 @@
-"scripts": {
-  "build": "tsc"
-  "start": "http-server./dist -c-1"
+{
+  "name": "front-end-web-development",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "build": "tsc"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "^16.11.12",
+    "date-fns": "^2.28.0",
+    "typescript": "^5.5.2",
+    "ts-node": "^10.4.0"
+  }
 }
