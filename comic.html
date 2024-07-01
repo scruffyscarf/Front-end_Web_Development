@@ -5,7 +5,7 @@
     <title>Comic</title>
     <style>
         body {
-            font-family: Times New Roman, Arial, sans-serif;
+            font-family: Arial, sans-serif;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -46,37 +46,6 @@
 
 <div id="comicInfo"></div>
 
-<script>
-    function fetchComic() {
-        const email = document.getElementById('emailInput').value;
-        if (!email) return;
-
-        fetch(`https://fwd.innopolis.university/api/hw2?email=${encodeURIComponent(email)}`)
-            .then(response => response.text())
-            .then(html => {
-                const parser = new DOMParser();
-                const doc = parser.parseFromString(html, 'text/html');
-                const bodyText = doc.body.textContent.trim();
-                const comicId = parseInt(bodyText);
-                if (isNaN(comicId)) return;
-
-                return fetch(`https://fwd.innopolis.university/api/comic?id=${comicId}`);
-            })
-            .then(response => response.json())
-            .then(comicData => {
-                const comicInfoDiv = document.getElementById('comicInfo');
-                comicInfoDiv.innerHTML = `
-                <p>Month: ${comicData.month}</p>
-                <p>Number: ${comicData.num}</p>
-                <p>Year: ${comicData.year}</p>
-                <p>Upload Data: ${new Date(comicData.day).toLocaleDateString()}</p>
-                <p>Heading: ${comicData.safe_title}</p>
-                <p>Description: ${comicData.transcript}</p>
-                <img src="${comicData.img}" alt="${comicData.alt}">
-                `;
-            })
-            .catch(error => console.error('Error:', error));
-    }
-</script>
+<script src="./dist/comic.js"></script>
 </body>
 </html>
