@@ -1,0 +1,107 @@
+body {
+    font-family: "Times New Roman", "Arial", sans-serif;
+    background-color: #292929;
+    color: white;
+}
+
+h1 {
+    font-size: 30px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 25px;
+    text-align: center;
+}
+
+h3 {
+    font-size: 20px;
+    text-align: center;
+}
+
+p {
+    text-align: center;
+    font-size: 20px;
+    line-height: 25px;
+}
+
+a {
+    color: yellow;
+    margin: 25px;
+    font-size: 40px;
+}
+
+.social {
+    margin: 25px;
+}
+
+.contacts {
+    margin: 25px;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.list {
+    font-size: 25px;
+}
+
+img {
+    width: 50%;
+    border-radius: 25px;
+    border: 2px solid yellow;
+    height: auto;
+    margin: 10px;
+    object-fit: cover;
+    align-self: flex-start;
+}
+
+.rectangle {
+    border-radius: 25px;
+    border: 2px solid yellow;
+    padding: 25px;
+    margin: 10px 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.rectangle.about {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0;
+}
+
+.about-text {
+    width: 50%;
+    padding: 25px;
+}
+
+#comicForm {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+#emailForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 25px;
+}
+
+#emailForm input[type="email"] {
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+#emailForm button {
+    padding: 5px 15px;
+}
